@@ -1,0 +1,14 @@
+language: node_js
+node_js:
+- node
+before_deploy:
+- npm run build
+deploy:
+  skip_cleanup: true
+  provider: npm
+  email: travis.schnider@gmail.com
+  api_key:
+    secure: yk7snutPv7wvT/lbmfYpXQrqmrYfsBEm7jhDgAfOH8KzUIsjy2gyVQPU71fQJ5sU/qLMajoqV4Qf2ySBwLKs1EgZnoo3Q1YMCeVszb2BEK/L1HRaZZ0/E/iM4DmvTIPkEGwwzpJpUBRmoUhyBX1cn5m4ZQbmlXY2K+vt6r5CQYlCGdTWbuzhGHlkgoffkqlSYTv3YTPuqivD9HfKjRIb9OhA8YDjcgYRKlJk8TiNes4V42XTBVfIphilM7oQc1Q3Bwrt036jHBILCsIGU1jXmuyw1XlaJBhEGiHd5GQAoKp5J39QCYocuEeGLzBcehnxvETw3HQVxcRvY6kNeQ1a3d7kjd3j0KrNRDgdn9ODRdmzQGxHi2EQRsBCPvadkfnUZA8QQ/8yIhKtpkUOhCzF8ee4HoCFTacrapMDMZxecUE/ib5g5PDYtQ3sIR+6oqeuZH3Hab0+o2Dhu0erAL5NS3BEoE06RFKx7aKU+qj4MV327Xgjen2F2oGoOJ6jrWGaDk0Ta6CjFI8w0Bqn1f7prh3nEDpwyhYtK6qHRFzaRuwHaiq3e4b52auzoxLIxjbW+B10JvKeZPMQpefqv1zAew7TNTwz6XF/xCRwx/zT09MMdMIDtHfYz+3HcB3Ik/Z2DcpNnhErnlFZjYDi064ygE3wFL7K43BvBZu9aga5GWU=
+  on:
+    tags: true
+    repo: tschnide/masks-js

@@ -9,7 +9,7 @@ function maskUSPhone(phone) {
   }
 
   // returning the untouched value when it contains non-digit chars or when it has a length != 10
-  if (digitsOnly.test(phone) === false || phone.length !== 10) {
+  if (digitsOnly.test(phone) === false || phone.length > 11) {
     return phone;
   }
 
