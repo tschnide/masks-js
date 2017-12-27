@@ -4,7 +4,7 @@
   "description": "A NPM package that exports functions to mask values.",
   "main": "build/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "babel ./src -d ./lib"
   },
   "repository": {
     "type": "git",
@@ -21,5 +21,16 @@
   "bugs": {
     "url": "https://github.com/tschnide/masks-js/issues"
   },
-  "homepage": "https://github.com/tschnide/masks-js#readme"
+  "homepage": "https://github.com/tschnide/masks-js#readme",
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-es2015": "^6.24.1"
+  },
+  "dependencies": {},
+  "babel": {
+    "presets": [
+      "es2015"
+    ]
+  }
 }
